@@ -8,4 +8,6 @@ A copy of the sourcefile usedfor my testing is included in the folder with the p
 #### Usage:
 Script to run     sourceFile                  catalogName                                                   schoollist                  classlist
 ---------------   --------------------------- ------------------------------------------------------------  -------------------------   ------------------------
+```
 .\ParseFile.ps1  "C:\temp\coursecatalog.txt"  "DOL Real Estate Education Course Catalog December 15, 2015"    "C:\temp\schoollist.csv"  "C:\temp\schoollist.csv"
+```
