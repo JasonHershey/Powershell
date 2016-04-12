@@ -1,4 +1,4 @@
-This folder contains various powershell scripts I've created for personal use.  Enjoy
+This folder contains various powershell scripts I've created for personal use or small client projects.  Enjoy
 
 ### ParseFile Powershell Script
 Parses a text file containing WA State Real Estate Course info and creates a list of schools and courses.
