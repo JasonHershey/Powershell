@@ -22,7 +22,7 @@ This script does NOT create the frameset that will consume the TOC file
 - A pre-requisite for the process to work is that the Word document must have TOC bookmarks for the headings.This may require that you add a TOC to the document, from within Word, before running this script.  After you add the TOC and save the Word document, you can then delete the TOC itself from the Word document.
 
 #### Included files
-The FRameTOCCreator folder contains the source Windows PowerShell script, a config file, and sample files. The full list is:
+The FrameTOCCreator folder contains the source Windows PowerShell script, a config file, and sample files. The full list is:
 - FrameTOCCreatorconfig.xml - Thsi is the Windows PowerShell script. See the script for full details on usage.
 - FrameTOCCreatorconfig.xml - This XML file contains configurable data for use in the script. For example, you can define the heading styles that the script should look for, and you can customize the HTML output for the TOC file.
 - default.htm - A sample frameset html file is provided. This file contains the following sections/divs:
