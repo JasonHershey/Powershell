@@ -1,0 +1,70 @@
+body {
+font-family: Segoe UI;
+font-size: 13px;
+height: 100%;
+}
+
+#header {
+width: 100%;
+height: 80px;
+position: absolute;
+top: 0px;
+}
+
+
+#toc {
+float: left;
+height: 90%;
+width: 20%;
+position: absolute;
+top:80px;
+}
+
+#tocfile ul
+{
+list-style-type:none;
+}
+
+#tocfile li
+{
+line-height: 2;
+
+}
+
+#tocfile li a
+{
+text-decoration: none;
+}
+
+#content {
+float: right;
+width: 80%;
+height: 85%;
+position: absolute;
+right: 10px;
+top: 80px;
+}
+
+#footer {
+height: 5%;
+width: 100%;
+background-color: #EEE;
+margin: auto;
+position: absolute;
+float: left;
+bottom: 0px;
+}
+
+
+#tocobject {
+height: 100%;
+width: 100%;
+
+}
+
+[name=helpfile] {
+width: 90%;
+height: 90%;
+float: right;
+position: relative;
+}

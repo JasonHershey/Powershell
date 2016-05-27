@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<frametoccreatorconfig>
+  <wordheadingstyles>
+    <headingcommon>Heading</headingcommon>
+    <heading1>Heading1</heading1>
+    <heading2>Heading2</heading2>
+    <heading3>Heading3</heading3>
+  </wordheadingstyles>
+  <htmltemplates>
+    <tocfilestart><![CDATA[<html><head><link rel='StyleSheet' href='mlxhelp.css' type='text/css' media='screen'/></head><body id='tocfile'>]]> </tocfilestart>
+    <tocfileend><![CDATA[</body></html>]]></tocfileend>
+    <toclevelstart><![CDATA[<ul>]]></toclevelstart>
+    <toclevelend><![CDATA[</ul>]]></toclevelend>
+    <tocentry><![CDATA[<li><a href='{url}#{anchor}' target='helpfile'>{linktext}</a></li>]]></tocentry>
+  </htmltemplates>
+</frametoccreatorconfig>
