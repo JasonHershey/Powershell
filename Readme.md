@@ -50,4 +50,4 @@ where
 
 ## License
 
-These scripts are provided under the GNU General Public License (license.md)[License]
+These scripts are provided under the GNU General Public License [License](license.md)
