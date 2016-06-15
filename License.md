@@ -1,5 +1,4 @@
 # GNU GENERAL PUBLIC LICENSE
-
 Version 3, 29 June 2007
 
 Copyright (C) 2016 Tellus Consulting and Project Management (http://tellus-consulting.com/)[http://tellus-consulting.com/]
