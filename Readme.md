@@ -48,3 +48,6 @@ where
 - tocFileName - This is the output name of the HTML TOC file.  Again, do not provide the file extenstion or file path
 - debugFlag - This script createse several temporary files as part of the TOC and HTML output file creation process.  The script deletes the files when its done with them.  Setting this parameter to $true will tell the script to leave the files and not delete them. This could be useful for troubleshooting.
 
+## License
+
+These scripts are provided under the GNU General Public License (license.md)[License]
