@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xmlsrconfig>
+  <!-- Use the commonconfig section to pass parameters instead of the command line-->
+  <commonconfig>
+    <sourcefolder>C:\Users\Jason\Documents\GitHub\Powershell\XMLSR\input</sourcefolder>
+    <outputfolder>C:\Users\Jason\Documents\GitHub\Powershell\XMLSR\output</outputfolder>
+    <!-- not currently used. provided in case namespaces are needed for xml-->
+      <namespace>
+      <name></name>
+      <uri></uri>
+    </namespace>
+  </commonconfig>
+  
+    <!-- configurations for text-based search and replaces. Supports standard PowerShell wildcards-->
+  <txtsrs>
+    <txtsr name="Case 1 - Test 1">
+      <search><![CDATA[can't]]></search>
+      <replace><![CDATA[cannot]]></replace>
+    </txtsr>
+    <txtsr name="Case 1 - Test 2">
+      <search><![CDATA[won't]]></search>
+      <replace><![CDATA[will not]]></replace>
+    </txtsr>
+    <txtsr name="Case 2">
+      <search><![CDATA[\b([a-z|A-Z])a([a-z|A-Z])\b]]></search>
+      <replace><![CDATA[$1o$2]]></replace>
+    </txtsr>
+
+  </txtsrs>
+  
+  
+<!-- configurations for xml-based search and replaces. xPaths to search and replaces must be in CDATA sections if containing any XML-->
+    <xmlsrs>
+    <xmlsr name="Case 3 and Case 3.1">
+      <search><![CDATA[//h2[not(text())][not(title)]]]></search>
+      <!-- empty CDATA for replace means that any node found will be deleted-->
+      <replace><![CDATA[]]></replace>
+    </xmlsr>
+
+    <xmlsr name="Case 4">
+      <search><![CDATA[//h3]]></search>
+      <replace><![CDATA[<para><bold>%1</bold></para>]]></replace>
+    </xmlsr>
+  
+    <xmlsr name="Case 5">
+      <search><![CDATA[//h4[text()='This Title Caps Heading Should Become Sentence Capped']]]></search>
+      <replace><![CDATA[<h4 name='Case 5'><bold>This title caps heading should become sentence capped</bold></h4>]]></replace>
+    </xmlsr>
+
+  </xmlsrs>
+
+  <!-- XML transform search and replaces.  Finds a node and then applies the transform, and then replaces the node with the results.  xform element msust contain a valid xslt transform-->
+
+  <xmlxforms>
+    <xmlxform name="Case 6">
+      <target><![CDATA[//section[not(subsection2[*])]]]></target>
+      <xform>
+        <![CDATA[
+        <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl" xml:space="default">
+  <xsl:template match="section" xml:space="preserve">
+    <xsl:copy xml:space="default"><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+      <xsl:apply-templates select="node()"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="subsection" xml:space="preserve">
+    <subsection>
+      <xsl:apply-templates select="./*[1]"/>
+    </subsection>
+    <subsection2>
+      <xsl:apply-templates select="./*[position()>1]"/>
+    </subsection2>
+  </xsl:template>
+  <xsl:template match="subsection2"></xsl:template>
+  <xsl:template match ="*">
+    <xsl:copy>
+      <xsl:apply-templates select="node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>]]></xform>
+    </xmlxform>
+
+  </xmlxforms>
+  
+</xmlsrconfig>
+
+

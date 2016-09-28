@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-content>
+  <!-- Test cases for text-based search and replace-->
+  
+    <!-- Simple SR-->
+        <case name="Case 1">
+          <para>won't should become will not</para>
+          <para>can't should become cannot</para>
+          <para>Even if in the middle of a sentence, won't should become will not</para>
+          <para>The same thing should happen to can't when in the middle of sentence. All instances should be replaced</para>
+        </case>
+  
+    <!-- Regex -->
+        <case name="Case 2">
+          <para>The regex should turn: cat, bat, fat, and mat  into cot, bot, fot, and mot.</para>
+        </case>
+  
+  <!-- Test cases for xml-based/xpath-based search and replace-->
+  
+      <!-- Test case for deleting a node when no replacement specified-->
+      <h2 name="Case 3"></h2>
+      <h2 name ="Case 3.1">This heading should not be deleted, but the empty one before it should be deleted.</h2>
+  
+      <!-- Test case for using contents of node in replacement. -->
+      <h3 name="Case 4">This heading should become a bold paragraph</h3>
+  
+      <!-- Test case for replacing node completely-->
+      <h4 name="Case 5">This Title Caps Heading Should Become Sentence Capped</h4>
+  
+<!-- Test case for transform-based search and replace-->
+  
+  <case name="Case 6">
+    <section>
+      <title>Title</title>
+      <subsection id="1">
+        <para>The first paragraph should stay.</para>
+        <para>This paragraph and the following list should be moved to subsection2.</para>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+        </ul>
+      </subsection>
+      <subsection2/>
+    </section>
+  </case>
+
+</test-content>
