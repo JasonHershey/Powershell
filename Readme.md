@@ -45,7 +45,7 @@ This script does NOT create the frameset that will consume the TOC file
 
 #### Included files
 The FrameTOCCreator folder contains the source Windows PowerShell script, a config file, and sample files. The full list is:
-- FrameTOCCreatorconfig.xml - Thsi is the Windows PowerShell script. See the script for full details on usage.
+- FrameTOCCreatorconfig.ps1 - This is the Windows PowerShell script. See the script for full details on usage.
 - FrameTOCCreatorconfig.xml - This XML file contains configurable data for use in the script. For example, you can define the heading styles that the script should look for, and you can customize the HTML output for the TOC file.
 - default.htm - A sample frameset html file is provided. This file contains the following sections/divs:
   - header - The header div is for a top header section for your page
@@ -62,7 +62,7 @@ The FrameTOCCreator folder contains the source Windows PowerShell script, a conf
 Script to run         wordDoc               outputFileName             tocFileName       debugFlag
 --------------------  ---------------------- ------------------------- -----------------  ------------------
 
-.\FramTOCCreator.ps1  -wordDoc "source.docx" -outputFileName "content" -tocFileName "toc" -debugFlag $false
+.\FrameTOCCreator.ps1  -wordDoc "source.docx" -outputFileName "content" -tocFileName "toc" -debugFlag $false
 ``` 
 where
 - wordDoc - The source Word document. 
