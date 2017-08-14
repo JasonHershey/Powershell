@@ -70,6 +70,16 @@ where
 - tocFileName - This is the output name of the HTML TOC file.  Again, do not provide the file extenstion or file path
 - debugFlag - This script createse several temporary files as part of the TOC and HTML output file creation process.  The script deletes the files when its done with them.  Setting this parameter to $true will tell the script to leave the files and not delete them. This could be useful for troubleshooting.
 
+### VRecognition PowerShell script
+This script is a short example/test of the Azure cognitive services voice recogntion apis.  You can find more details about these apis 
+at [Speaker Recognition APIs](https://azure.microsoft.com/en-us/services/cognitive-services/speaker-recognition/).
+My purpose in creating the script is to make sure I understand how the APIs work.  Im a big fan of PowerShell and I find it a great place to prototype and practice.
+
+### FRecognition PowerShell script
+This script is a short example/test of the Azure cognitive services facial recogntion apis.  You can find more details about these apis 
+at [Facial Recognition APIs](https://docs.microsoft.com/en-us/azure/cognitive-services/face/).
+My purpose in creating the script is to make sure I understand how the APIs work.  
+
 ## License
 
 These scripts are provided under the GNU General Public License [License](license.md)
