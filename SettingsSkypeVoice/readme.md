@@ -21,12 +21,10 @@ The script is commented, but here are the basics of what it does:
 3. Install the SFBO module 
 4. Create/Import a remote SFBO session
 5. Gets a list of supported Autoattendant languages \(just for the heck of it\)
-6. Sets a variable as the EN-US Autoattendant langauge
-
+6. Sets a variable as the EN-US Autoattendant langauge.
   The language contains the voices.
 
 7. Sets a variable as the **Benjamin** voice.
-
   The EN-US language has 3 female voices and 1 mail voice.
 
 8. Gets your organizational Autoattendants. \(so you can see the settings. You need to see the URI's\)
